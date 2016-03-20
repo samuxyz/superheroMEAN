@@ -10,7 +10,7 @@ var superhero = require('./app/routes/superhero')();
 
 var options = { server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } }; 
-mongoose.connect('mongodb://admin:admin@ds019839.mlab.com:19839/superhero', options);
+mongoose.connect('YOUR_DB_LOCATION', options);
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
