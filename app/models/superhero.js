@@ -12,7 +12,7 @@ var SuperheroSchema = new Schema({
     createdAt: {type: Date, default: Date.now},    
 });
 
-// Sets the created_at parameter equal to the current time
+// Sets the createdAt parameter equal to the current time
 SuperheroSchema.pre('save', function(next){
     now = new Date();
     if(!this.createdAt) {
