@@ -1,0 +1,26 @@
+{
+  "name": "superheroMEANApp",
+  "description": "superhero database",
+  "main": "server.js",
+  "authors": [
+    "samzaza zaza.samuele@gmail.com"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-filepicker": "^1.1.4",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2"
+  }
+}

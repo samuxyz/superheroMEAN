@@ -1,0 +1,15 @@
+<!-- view the gallery of all the superheroes in the db -->
+<div class="row">
+<div ng-repeat="superhero in superheroes">
+	<div class="col-md-4 col-xs-6  col-sm-offset-0">			
+	<div class="thumbnail">
+      <img ng-src="{{superhero.picture.url | fpConvert: {filter:'sharpen', w:300, h:150} }}" />
+      <div class="caption text-center">
+        <h3>{{superhero.name}}</h3>
+        <p><label>Super powers: </label> {{superhero.superPowers}}</p>
+        <div class="text-right"><a ng-href="/#/detail/{{superhero._id}}" class="btn btn-danger" role="button">View</a> </div>
+      </div>
+    </div>
+	</div>	
+</div>
+</div>

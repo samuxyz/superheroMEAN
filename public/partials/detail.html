@@ -1,0 +1,26 @@
+<!-- View the details of a superhero -->
+<div class="col-md-8 col-md-offset-2">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h2 class="panel-title text-center"><span class="glyphicon glyphicon-user"></span> Superhero details </h2>
+		</div>
+		<div class="panel-body text-center">
+			<img ng-src="{{superhero.picture.url | fpConvert: {filter:'sharpen', w:500} }}" />
+			<h1>{{superhero.name}}</h1>
+			<hr />
+			<p class="text-left"><label>gender: </label> {{superhero.gender}}</p>
+			<p class="text-left"><label>Super powers: </label> {{superhero.superPowers}}</p>
+			<!-- Only if there are other pictures -->
+			<div ng-if="superhero.morePictures">
+				<h3> More Pictures <h3>
+				<div ng-repeat="picture in superhero.morePictures">
+					<div class="col-md-{{12 / superhero.morePictures.length}}">
+						<a ng-href="{{picture.url}}" class="thumbnail">
+						  <img ng-src="{{picture.url | fpConvert: {filter:'sharpen', w:500} }}">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
