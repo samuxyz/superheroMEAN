@@ -1,5 +1,5 @@
 //Main file
-var app = angular.module('superheroApp', ['addSuperheroCtrl', 'galleryCtrl', 'detailCtrl', 'ngRoute', 'angular-filepicker'])
+var app = angular.module('superheroApp', ['addSuperheroCtrl', 'galleryCtrl','detailCtrl', 'ngRoute', 'angular-filepicker'])
     .config(function($routeProvider, filepickerProvider){
 		//The route provider handles the client request to switch route
         $routeProvider.when('/addSuperhero', { 			
